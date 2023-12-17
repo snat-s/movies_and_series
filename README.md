@@ -1,4 +1,4 @@
-# movie_app_final
+# movie_app_series
 
 A simple movie and series logger for movies and series.
 
