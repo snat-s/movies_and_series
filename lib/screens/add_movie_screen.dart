@@ -34,15 +34,13 @@ class _AddMovieScreenState extends State<AddMovieScreen> {
     genreChips = widget.genres.map((genre) {
       return ChoiceChip(
         label: Text(genre),
-        selected: false, // You can manage the selected state here
+        selected: false,
         onSelected: (bool selected) {
           selectedGenreIndex = selected ? widget.genres.indexOf(genre) : -1;
         },
       );
     }).toList();
     selectedGenres = List.generate(genreChips.length, (index) => false);
-
-    print('Received id: ${widget.id}');
   }
 
   Future<void> pickImageFromGallery() async {
@@ -52,7 +50,6 @@ class _AddMovieScreenState extends State<AddMovieScreen> {
     }
     setState(() {
       _imageFile = File(pickedFile.path);
-      print(_imageFile);
     });
   }
 
